@@ -1153,6 +1153,17 @@ helm upgrade --install \
 
 See [ArtifactHub](https://artifacthub.io/packages/helm/ingress-nginx/ingress-nginx?modal=values) or [values.yml](https://github.com/kubernetes/ingress-nginx/blob/main/charts/ingress-nginx/values.yaml) for more options.
 
+### Install Haproxy Ingress Controller
+
+```
+helm upgrade --install \
+  haproxy-ingress haproxy-ingress \
+  --repo https://haproxy-ingress.github.io/charts \
+  --create-namespace --namespace ingress-controller\
+  --version 0.16.0 --devel \
+  --set controller.ingressClassResource.enabled=true
+```
+
 ### Create Ingress
 
 ### Webservers and Ingress
