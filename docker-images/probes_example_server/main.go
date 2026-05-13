@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"os"
+	"path/filepath"
 
 	"github.com/spf13/cobra"
 )
@@ -35,6 +37,14 @@ var serverCmd = &cobra.Command{
 }
 
 func main() {
+	// If the binary is called "http", run the client command directly.
+	// This allows us to use the same image for both server and client.
+	if filepath.Base(os.Args[0]) == "http" {
+		clientCmd.Execute()
+		return
+	}
+
+	// Otherwise, run the root command which has both server and client as subcommands.
 	rootCmd.AddCommand(clientCmd)
 	rootCmd.AddCommand(serverCmd)
 	rootCmd.Execute()
