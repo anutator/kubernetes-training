@@ -6,5 +6,5 @@ RUN go build
 
 FROM scratch
 COPY --from=build /build/probes_example_server /
-CMD ["/probes_example_server"]
+CMD ["/probes_example_server", "server"]
 EXPOSE 8000
