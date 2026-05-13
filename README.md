@@ -180,6 +180,16 @@ kubectl explain pod.spec
 kubectl explain pod.spec.containers.image
 ```
 
+Recursive explain
+
+```
+kubectl explain pod.spec.containers.livenessProbe
+```
+
+```
+kubectl explain pod.spec.containers.livenessProbe --recursive
+```
+
 ### Get Nodes
 
 ```
