@@ -2333,6 +2333,8 @@ kubectl delete -f hpa.yml
 helm repo add sikalabs https://helm.sikalabs.io
 ```
 
+See SikaLabs packages on ArtifactHub: <https://artifacthub.io/packages/search?repo=sikalabs&sort=relevance&page=1>
+
 ### Search Package
 
 Search local repositories
