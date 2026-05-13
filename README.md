@@ -1302,6 +1302,14 @@ Use `/livez` instead of `/healthz` (deprecated)
 
 [source](https://www.jaktech.co.uk/java/difference-between-livez-readyz-and-healthz-in-kubernetes-cluster/)
 
+### Complete example of probes
+
+See [probes_example_server](./docker-images/probes_example_server) implemented in Go.
+
+```
+kubectl apply -f probes.yml
+```
+
 ### Startup Probe
 
 ```
