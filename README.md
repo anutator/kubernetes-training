@@ -1927,7 +1927,7 @@ kubectl config view --raw --flatten --minify
 Backup your kubeconfig first
 
 ```
-cp ~/.kube/config ~/.kube/config.$(date +%Y-%m-%d_%H-%M-%S).backup
+cp ~/.kube/config ~/.kube/.config.$(date +%Y-%m-%d_%H-%M-%S).backup
 ```
 
 Add `kubeconfig-new.yml` to your kubeconfig
