@@ -400,7 +400,7 @@ kubectl proxy --address 0.0.0.0 --accept-hosts=".*"
 On lab VM, you can also run proxy in Docker:
 
 ```
-docker run -d --name proxy --net host -v /root:/root sikalabs/kubectl kubectl proxy --address 0.0.0.0 --accept-hosts=".*"
+docker run -d --name proxy --net host -v /root:/root registry.k8s.io/kubectl:v1.36.0 proxy --address 0.0.0.0 --accept-hosts=".*"
 ```
 
 ### See Pods using kubectl proxy
