@@ -11,3 +11,19 @@ counter-*.tgz
 
 kube-prometheus
 *.local.yml
+
+# Terraform
+.terraform
+*.tfplan
+*.tfstate
+.terraform.tfstate.lock.info
+*.tfvars
+!*.EXAMPLE.tfvars
+override.tf
+
+# Terragrunt
+.terragrunt-cache
+
+# Infracost
+.infracost
+.infracost-reports
