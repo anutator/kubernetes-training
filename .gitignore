@@ -16,6 +16,7 @@ kube-prometheus
 .terraform
 *.tfplan
 *.tfstate
+*.tfstate.backup
 .terraform.tfstate.lock.info
 *.tfvars
 !*.EXAMPLE.tfvars
