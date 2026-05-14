@@ -58,6 +58,13 @@ func server() error {
 		log.Printf("[%s] fail readiness\n", hostname)
 	})
 
+	http.HandleFunc("/api/fix-readiness", func(w http.ResponseWriter, r *http.Request) {
+		ReadinessProbeOK = true
+		w.WriteHeader(200)
+		w.Write([]byte("OK " + hostname + "\n"))
+		log.Printf("[%s] fix readiness\n", hostname)
+	})
+
 	log.Printf("[%s] starting probes-example-server\n", hostname)
 	log.Printf("[%s] Listening on 0.0.0.0:8000, see http://127.0.0.1:8000\n", hostname)
 	return http.ListenAndServe(":8000", nil)
